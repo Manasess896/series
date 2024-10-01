@@ -1,0 +1,71 @@
+body {
+            background-color: #000;
+            color: white;
+        }
+    .title {
+      color: red;
+      position: absolute;
+      z-index: 100;
+      background-color: rgba(175, 175, 175, 0.5);
+      top: 0;
+    }
+        #on-air-grid {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 20px;
+        }
+
+        .on-air-card {
+            width: 300px;
+            height: 450px;
+            perspective: 1000px;
+            cursor: pointer;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        .on-air-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+
+        .on-air-card.flip .on-air-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .on-air-card-front,
+        .on-air-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .on-air-card-front {
+            background: #fff;
+        }
+
+        .on-air-card-back {
+            background: #333;
+            transform: rotateY(180deg);
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .on-air-card-back h3,
+        .on-air-card-back p {
+            margin: 10px 0;
+            font-size: 12px;
+        }
+
+        .on-air-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }

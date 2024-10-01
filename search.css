@@ -1,0 +1,277 @@
+     body {
+            background-color: #000000;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+            text-transform: uppercase;
+          }
+      
+          li {
+            color: #FFFFFF;
+          }
+          li{
+            text-transform: uppercase;
+          }
+      
+        #nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+        justify-content: space-around;
+            padding: 10px 0;
+            border: 1px solid #E1E1E1F7;
+            border-radius: 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        #nav button {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        #nav button:hover {
+            background-color: #333333;
+            color: #CFA203F7;
+        }
+@media(min-width: 900px) {
+    #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #1D1D1D;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 1px solid #E1E1E1F7;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px;
+        z-index: 10;
+        border-radius: 0px;
+        overflow-y: auto;
+    }
+
+    #nav button {
+        background-color: #333;
+        color: #fff;
+        font-weight: 900;
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    #nav button:hover {
+        background-color: #0B23E8;
+        color: #fff;
+    }
+
+    .main {
+        margin-left: 270px; /* Adjusted to account for the width of the sidebar */
+        padding: 20px;
+    }
+}
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+      
+        }
+
+
+        .submit-button{
+            background-color:transparent;
+            border: none;
+            color: blue;
+            cursor: pointer;
+            font-size: 25px;
+            transition: color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            color: #04f564;
+            
+        }
+
+        #search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #1D1D1D;
+            border: 2px solid #E1E1E1F7;
+            border-radius: 40px;
+            padding: 10px;
+            margin-top: 20px;
+            width: fit-content;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media (min-width: 500px) {
+            #search-bar {
+                margin-top: 0;
+            }
+        }
+
+        .unique-movie-search-bar {
+            background-color: #47474700;
+            border: none;
+            padding: 5px;
+            color: #fff;
+            outline: none;
+            width: 200px;
+        }
+
+        .unique-movie-search-bar::placeholder {
+            color: #ccc;
+        }
+
+
+    .unique-movie-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+.unique-movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden; /* Allows wrapping of movie items */
+    gap: 20px;
+    /* Centers items horizontally */
+    padding: 20px; /* Adds padding around the container */
+}
+.unique-movie-item {
+    width: 200px;
+    perspective: 1000px;
+    margin-top: 60px;
+    cursor: pointer;
+    height: 300px;
+    flex-shrink: 0;
+}
+/* Styles for the movie card */
+.unique-movie-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    scale: 1;
+}
+
+.unique-movie-item.flip .unique-movie-card {
+    transform: rotateY(180deg);
+}
+
+.unique-movie-front, .unique-movie-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.unique-movie-front {
+    background: #000;
+}
+
+.unique-movie-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.unique-movie-back {
+    background: #fff;
+    color: #000;
+    transform: rotateY(180deg);
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 2.5em;
+}
+
+.unique-movie-info {
+    font-size: 14px;
+}
+.floating-btn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    padding: 20px;
+    background-color: #FF0000;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+   z-index: 10; 
+}
+
+
+.floating-btn:hover {
+    background-color: darkred;
+}
+
+/* Responsive styles */
+@media (min-width: 480px) {
+    .unique-movie-item {
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 768px) {
+    .unique-movie-item {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .unique-movie-item {
+        max-width: 350px;
+    }
+
+    .unique-movie-list {
+        flex-direction: row; /* Ensure items are in rows */
+        flex-wrap: wrap; /* Allow items to wrap */
+    }
+}
+
+@media (min-width: 1440px) {
+    .unique-movie-item {
+        max-width: 400px;
+    }
+
+    .unique-movie-list {
+        justify-content: start; /* Align items to the start */
+    }
+}

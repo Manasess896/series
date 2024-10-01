@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<htm lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9d3f00a5c9.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
+  <title>Sticky Bottom Navigation</title>
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="trendingseries.css">
+  <link rel="stylesheet" href="trendingmovies.css">
+  <link rel="stylesheet" href="genre.css">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="/highratedmovies.css">
+  <link rel="stylesheet" href="upcomingmovies.css">
+  <link rel="stylesheet" href="accordion.css">
+  <link rel="stylesheet" href="/nowplaying.css">
+  <link rel="stylesheet" href="onairseries.css">
+  <link rel="stylesheet" href="recommendation.css">
+
+</head>
+
+<body>
+  <nav>
+        <!-- Navigation Buttons -->
+        <div id="nav">
+          <button type="button" data-section="home">home</button>
+          <button id="btn1" type="button" data-section="trendingseries">Trending</button>
+    
+          <button type="button" data-section="privacy">menu</button>
+          <button type="button" data-section="movies">request</button>
+        </div>
+    
+    
+  </nav>
+  <main class="main">
+  <!--header>
+    <div class="search-container">
+      <button id="searchbtn" onclick="opensearchbar()" class="search-button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div-->
+
+    <!-- Search Bar Section -->
+    <div id="search-bar" >
+      <input type="text" id="unique-movie-search-bar" class="unique-movie-search-bar" placeholder="Search for a movie or series">
+      <button id="unique-movie-search-btn" class="submit-button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Results Section -->
+    <div class="results">
+      <div id="tmdb-movie-list" class="unique-movie-list"></div>
+      <div id="omdb-movie-list" class="unique-movie-list"></div>
+    </div>
+
+    <button class="floating-btn" id="clear-btn">EXIT</button>
+    </header>
+
+    <!-- Sections -->
+
+    <section id="trendingseries" class="content-section">
+      <h1>Trending Series</h1>
+      <div id="multi-btn-cont">
+        <button id="trendingseries-left-button" class="multi-left-btn">&#9664;</button>
+    
+      <p class="none" id="movie-regenerate-btn">Regenerate Movies</p>
+      <p id="movie-grid" class="movie-grid">
+        <!-- Movie items will be dynamically inserted here -->
+      </p>
+      <button id="trendingseries-right-button" class="multi-right-btn">&#9654;</button>
+      </div>
+      <div id="unique-header">
+        <h2>Trending Movies</h2>
+      </div>
+      <div class="tending-movie-c0nt" style="position: relative; width: 100%; overflow: hidden;">
+        <button id="trendingmovie-left-button" class="multi-left-btn">&#9664;</button>
+      <main id="unique-movies-grid">
+        <!-- Movie cards will be dynamically added here -->
+      </main>
+      <button id="trendingmovie-right-button" class="multi-right-btn">&#9654;</button>
+      
+      <button class="none" id="slide-left-btn">Slide Left</button>
+      <button class="none" id="slide-right-btn">Slide Right</button>
+    </div>  
+    </section>
+
+    <section id="home" class="content-section" style="display: none;">
+      <header class="genre-header">
+        <button class="genre-button" data-genre="10749">+18
+          <!--Tab to edit-->
+        </button>
+        <button class="genre-button" data-genre="28">Action</button>
+        <button class="genre-button" data-genre="12">Adventure</button>
+        <button class="genre-button" data-genre="16">Animation</button>
+        <button class="genre-button" data-genre="35">Comedy</button>
+        <button class="genre-button" data-genre="80">Crime</button>
+        <button class="genre-button" data-genre="99">Documentary</button>
+        <button class="genre-button" data-genre="18">Drama</button>
+        <button class="genre-button" data-genre="10751">Family</button>
+        <button class="genre-button" data-genre="14">Fantasy</button>
+        <button class="genre-button" data-genre="36">History</button>
+        <button class="genre-button" data-genre="27">Horror</button>
+        <button class="genre-button" data-genre="10402">Music</button>
+        <button class="genre-button" data-genre="9648">Mystery</button>
+        <button class="genre-button" data-genre="10749">Romance</button>
+        <button class="genre-button" data-genre="878">Science Fiction</button>
+        <button class="genre-button" data-genre="10770">TV Movie</button>
+        <button class="genre-button" data-genre="53">Thriller</button>
+        <button class="genre-button" data-genre="10752">War</button>
+        <button class="genre-button" data-genre="37">Western</button>
+      </header>
+
+      <main class="discover">
+      <h5>movies</h5>
+    <div id="multi-btn-cont">
+      <button class="multi-left-btn" id="moviesgenreleftbtn">&#9664;</button>
+        <div id="movies-genre" class="genre-movies-grid">
+         </div>
+         <button class="multi-right-btn" id="moviesgenrerightbtn">&#9654;</button></div>
+      <h5>series</h5>
+      <div id="multi-btn-cont">
+        <button class="multi-left-btn" id="seriesgenreleftbtn">&#9664;</button>
+          <div id="series-genre" class="genre-series-grid"></div>
+          <button class="multi-right-btn" id="seriesgenrerightbtn">&#9654;</button></div>
+    </div>
+      </main>
+
+    </section>
+
+    <section id="privacy" class="content-section" style="display: none;">
+      <div class="accordion">
+
+        <div class="container"> upcoming
+          <button class="openbuttons" id="button1" onclick="opencontent1()">&plus;</button>
+          <button class="closebuttons" id="button2" onclick="closecontent1()">&minus;</button>
+        </div>
+        <div class="content" id="content1">
+           <div id="upcoming-movies-container" style="position: relative; width: 100%; overflow: hidden;">
+        <button id="upcoming-left-button" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 10; color: orange; border: none; cursor: pointer;background-color: transparent;border: 0.1px solid white;font-size: 25px;">&#9664;</button>
+        <div  id="upcoming-grid"></div>
+    
+        <button id="upcoming-right-button" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10; color: orange; border: none; cursor: pointer; background-color: transparent;
+      font-size: 25px;
+      border: 0.1px solid whitesmoke;">&#9654;</button>
+      </div>
+      <footer style="display:none">
+        <button style="display:none" id="upcoming-load-more-btn">Load More</button></footer>
+    
+        </div>
+        <div class="container">on air series
+          <button onclick="opencontent2()" id="button3" class="openbuttons">&plus;</button>
+          <button onclick="closecontent2()" id="button4" class="closebuttons">&minus;</button>
+        </div>
+        <div class="content" id="content2">
+          <div id="on-air-grid"></div>
+    
+          <footer style="display:none">
+            <button style="display:none" id="on-air-load-more-btn">Load More</button>
+          </footer>
+        </div>
+        <div class="container"> highrated series
+          <button onclick="opencontent3()" id="button5" class="openbuttons">&plus;</button>
+          <button onclick="closecontent3()" id="button6" class="closebuttons">&minus;</button>
+        </div>
+        <div id="content3" class="content">
+          <div id="series-slidleft-btn-highrated" style="position: relative; width: 100%; overflow: hidden;">
+            <button id="highrated-left-btn" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background-color: #fff; border: none; cursor: pointer;background-color: transparent;border: 0.1px solid white;font-size: 25px;">&#9664;</button>
+            <button class="none" id="series-regenerate-btn-highrated">Regenerate Series</button>
+            <div id="series-grid-highrated" class="series-grid-highrated">
+              <!-- TV series items will be dynamically inserted here -->
+            </div>
+    
+            <button id="highrated-right-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background-color: #fff; border: none; cursor: pointer; background-color: transparent;
+      font-size: 25px;
+      border: 0.1px solid whitesmoke;">&#9654;</button>
+          </div>
+        </div>
+        <div class="container"> Now playing tv shows
+          <button onclick="opencontent4()" id="button7" class="openbuttons">&plus;</button>
+          <button onclick="closecontent4()" id="button8" class="closebuttons">&minus;</button>
+        </div>
+        <div id="content4" class="content">
+          <div id="nowplaying-movies-container" style="position: relative; width: 100%; overflow: hidden;">
+            <button id="nowplaying-left-button" class="multi-left-btn">&#9664;</button>
+            <div id="now-playing-grid"></div>
+            <button id="nowplaying-right-button" class="multi-right-btn">&#9654;</button>
+          </div>
+          <footer style="display:none">
+            <button style="display:none" id="now-playing-load-more-btn">Load More</button>
+          </footer>
+        </div>
+        <div class="container">privacy policy
+          <button onclick="opencontent5()" id="button9" class="openbuttons">&plus;</button>
+          <button onclick="closecontent5()" id="button10" class="closebuttons">&minus;</button>
+        </div>
+        <div id="content5" class="content">
+          <h1>Privacy Policy</h1>
+          <p>Welcome to our website! We prioritize the privacy and security of our users' information. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our services. By using our website, you agree to the terms of this Privacy Policy.</p>
+          <hr>
+          <ol>
+            <li>Information We Collect</li> <br>
+            <ol type="a">
+              <hr> <br>
+              <li>Personal Information</li> <br>
+              <ul>
+                <li>Telegram Number</li>
+                <p> We collect your Telegram number to send you the requested movie or series.</p>
+                <li>Nickname/Real Name</li>
+                <p> We collect your nickname or real name to personalize our communication with you.</p>
+                <li>Movie Title</li>
+                <p>We collect the title of the movie or series you request to fulfill your order.</p>
+              </ul>
+              <hr>
+              <li>Automatically Collected Information</li>
+              <ul>
+                <p>This website is designed to provide real-time device information. We do not require users to log in, and we do not sell any products or services. We may collect the following types of information from users:</p>
+                <ul>
+                  <li>Non-personal identification information</li>
+                  <p>such as browser type, operating system, IP address, screen width and height, referrer, language, cookie, URL, timestamp, user agent.</p>
+                  <li>Information collected through cookies and similar technologies.</li> <br>
+                  <li>Contact Form Data</li>
+                  <p>We collect and process personal information through our contact form when you provide us with your name and email address. This information is used solely for the purpose of responding to your feedback or inquiries.</p>
+                  <li>IP Addresses</li>
+                  <p> We collect your IPv4 and IPv6 addresses to provide location-based services and improve user experience.</p>
+                  <li>Location Data</li>
+                  <p> If you choose to share your location, we collect your live location to display it on a map and enhance our services.</p>
+                </ul>
+              </ul>
+            </ol>
+            <hr>
+            <li>How We Use Your Information</li>
+            <ul>
+              <li>Provide Services</li>
+              <p>We use your Telegram number to send you the requested movies or series.</p>
+              <li>Personalization</li>
+              <p>We use your nickname or real name to personalize our communication with you.</p>
+              <li>Improve Services</li>
+              <p>We use IP addresses and location data to improve our services and enhance user experience.</p>
+              <li>Support and Communication</li>
+              <p>We may use your information to contact you regarding your requests or to provide customer support.</p>
+            </ul>
+            <hr>
+            <li>Information Sharing</li>
+        
+            <p>We do not sell, trade, or otherwise transfer your personal information to outside parties except as described in this Privacy Policy. We may share your information with trusted third parties who assist us in operating our website and providing our services, as long as those parties agree to keep this information confidential.</p>
+            <hr>
+            <li>Data Security</li>
+        
+            <p>We implement various security measures to ensure the safety of your personal information. However, no method of transmission over the internet or method of electronic storage is completely secure. Therefore, we cannot guarantee its absolute security.</p>
+            <hr>
+            <li>Cookies</li>
+            <p>Our website may use cookies to enhance your experience. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your web browser that enables the site's or service provider's systems to recognize your browser and capture and remember certain information.</p>
+            <hr>
+            <li>Third-Party Services and Links</li>
+            <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or the content of these third-party sites. We encourage you to read the privacy policies of each website you visit.</p>
+            <ul>
+              <li>Formspree and Visme</li>
+              <p>We use Formspree and visme to collect the data submitted through our contact form. Visme and Formspree complies with data protection regulations and has its own privacy policy governing the collection and processing of personal information. For more information, please refer to Formspree's or Visme'sprivacy policy.</p>
+              <li>Third-Party Advertising Services</li>
+              <p>We are partnering with third-party advertising networks and platforms to display advertisements on our website. These third-party services may use cookies, web beacons, and other tracking technologies to collect information about your visits to our website and other websites to provide targeted advertisements based on your interests.</p>
+              <li>Firebase Database</li>
+              <p>We use Firebase, a cloud-based platform provided by Google, to store and manage data collected through our website, such as user feedback and inquiries submitted through our contact form. Firebase helps us securely store and process this data, enabling us to respond to your feedback and inquiries efficiently.</p>
+            </ul>
+            <hr>
+            <li>User Rights</li>
+            <p>What are your data protection rights?</p>
+            <ol type="a">
+              <p>Our Company would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+        
+              <li>The right to access</li>
+              <p>You have the right to request Our Company for copies of your personal data. We may charge you a small fee for this service.</p>
+        
+              <li>The right to rectification</li>
+              <p>You have the right to request that Our Company correct any information you believe is inaccurate. You also have the right to request Our Company to complete the information you believe is incomplete.</p>
+        
+              <li>The right to erasure</li>
+              <p>You have the right to request that Our Company erase your personal data, under certain conditions. Examples include withdrawing consent, data no longer being necessary, or unlawful processing.</p>
+        
+              <li>The right to restrict processing</li>
+              <p>You have the right to request that Our Company restrict the processing of your personal data, under certain conditions.</p>
+        
+              <li>The right to object to processing</li>
+              <p>You have the right to object to Our Company’s processing of your personal data, under certain conditions.</p>
+        
+              <li>The right to data portability</li>
+              <p>You have the right to request that Our Company transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
+            </ol>
+            <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: <a href="mailto:webeighteen18@gmail.com">webeighteen18@gmail.com</a> <br>
+           <a href="tel:+254106159887">call us</a>
+            </p>
+            <hr>
+            <li>Data Retention</li>
+            <p>We retain your personal information for one month or two months under special circumstances  to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Once your data is no longer needed, we will securely dispose of it.</p>
+            <hr>
+            <li>International Data Transfers</li>
+            <p>Your personal data may be transferred to and processed in countries other than your own. We ensure that appropriate safeguards are in place to protect your personal data in compliance with applicable data protection laws.</p>
+            <hr>
+            <li>Your Consent</li>
+            <p>By using our website, you consent to the collection and use of your personal information as described in this Privacy Policy.</p>
+            <hr>
+            <li>Third-Party Payment Processors</li>
+            <p>If you make a purchase or donation on our site, we may use third-party payment processors. These processors adhere to their own privacy policies and are responsible for securing your payment information. We do not store any payment card information.</p>
+            <hr>
+            <li>Changes to Our Privacy Policy</li>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on our website. You are advised to review this Privacy Policy periodically for any changes.</p>
+            <hr>
+            <li>Children’s Privacy</li>
+            <p>Our services are not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently received personal information from a child under 13, we will delete such information from
+            our database as soon as possible .
+            </p>
+            <hr>
+            <li>data breach notification</li>
+            <p>On an  unlikely event of data breach we will notify our users through our website and contact infomation provided  by users .The website services won't be accessible and instead it will display a breach of data notification</p><hr>
+            <li>where we store your data </li>
+            <p>we store data collected from the website in our firebase database.The databas is located </p>
+            <hr>
+        <li>Advertisements</li>
+        <p>Our website may display advertisements from third-party ad networks. These ads may use cookies and other tracking technologies to collect information about your browsing behavior to display relevant ads.</p>
+        <hr>
+        <li>Forms</li>
+        <p>We provide forms on our website for you to submit requests or feedback. The information you provide in these forms is used solely for the purpose of responding to your requests and improving our services.</p>
+        <hr>
+        <li>Data Security</li>
+        <p>We take reasonable measures to protect your information from unauthorized access, alteration, or disclosure. However, no data transmission over the internet or storage system can be guaranteed to be 100% secure.</p>
+        <hr>
+        <li>Changes to This Policy</li>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page, and we encourage you to review this policy periodically.</p>
+        <hr>
+        <li>Contact Us</li>
+        <p>If you have any questions or concerns about our Privacy Policy, please contact us through the form provided on our website.</p> <hr>
+        <a href="mail:webeighteen18@gmail.com" class="fa fa-envelope"></a> <a class="fa fa-phone" href="+254106159887"></a> <a href="https://wa.me/+254106159887" class="fa fa-whatsapp"></a>
+          </ol></div>
+        <div class="container"> recommendation
+          <button onclick="opencontent6()" id="button11" class="openbuttons">&plus;</button>
+          <button onclick="closecontent6()" id="button12" class="closebuttons">&minus;</button>
+        </div>
+        <div id="content6" class="content">
+          <div class="similar-box">
+            <input type="text" id="recommendation-search-input" placeholder="Search for a movie...">
+            <button id="recommendation-search-btn"><i class="fa fa-search"></i></button>
+          </div>
+          <div id="recommendation-grid" class="recommendation-grid">
+            <!-- Movie items will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="movies" class="content-section" style="display: none;">
+      <div class="requestforms"><!-- request Form -->
+      <div id="form1" class="form-container">
+        <h2 class="h2">request a movie or a tv show </h2>
+        <form action="https://formspree.io/f/moqgpbjg" method="POST" >
+            <label class="label" for="name">Name:</label>
+            <input placeholder="e.g:john" class="input" type="text" id="name" name="name" required>
+
+            <label class="label" for="telegram">Telegram Number:</label>
+            <input placeholder="e.g:+254114471302"
+            class="input" type="tel" id="telegram" name="telegram" required>
+
+            <label class="label" for="movie">Name of series or Movie:</label>
+            <input class="input" placeholder="e.g:prison break" type="text" id="movie" name="movie" required>
+
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="visme_d" data-title="Feedback Form" data-url="q6pymq9w-feedback-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="74834"></div>
+    <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+      </div>    
+<!-- partial:index.partial.html -->
+
+ 
+    </section>
+    <canvas id="animationCanvas"></canvas>
+<!-- partial -->
+    <button onclick="topFunction()" id="back-to-top-btn" title="Go to top">Top</button>
+      <!-- Firebase SDK -->
+      <div id="consentModal" class="modal">
+        <div class="modal-content">
+          <p>Please read and agree to our <a href="term.html">terms of service.</a></p>
+          <label class="checkbox-label">
+            <input onclick="closeModal()" type="checkbox" id="agreeCheckbox">
+               I agree to the terms of service.
+          </label>
+        </div>
+      </div>
+      <!-- Firebase SDK -->
+      <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+      <script src="config.js"></script>
+    <script src="trendingseries.js"></script>
+    <script src="search.js"></script>
+    <script src="main.js"></script>
+    <script  src="script.js"></script>
+
+    <script src="trendingmovies.js"></script>
+    <script src="/genre-movies.js"></script>
+    <script src="/genre-series.js"></script>
+    <script src="/accordion.js">
+    </script>
+    <script src="/highratedmovies.js"></script>
+    <script src="/nowplaying.js"></script>
+    <script src="onairseries.js"></script>
+    <script src="recommendation.js"></script>
+    <script src="upcoming movies.js"></script>
+</body>
+
+</html>

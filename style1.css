@@ -1,0 +1,141 @@
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 7;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #FF0000;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  width: 60px;
+  height: 50px;
+}
+
+#back-to-top-btn:hover {
+  background-color: #00FF05;
+}
+
+.h1{
+  font-size:5vh;
+  text-transform: uppercase;
+}
+h2,h3{
+  font-size: 20pt;
+  text-align: center;
+  text-transform: uppercase;
+}
+h4 {
+    color: white;
+    font-size: 13pt;
+    text-transform: uppercase;
+}
+
+.span {
+    color: red;
+    text-transform: uppercase;
+}
+
+/* Manual Request Form */
+.form-container {
+    background-color: #85858500;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    border: 1px solid whitesmoke;
+    text-align: center;
+    margin: 5px auto;
+}
+
+.h2 {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin: 10px ;
+}
+
+.input {
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button {
+    width: 90%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.button1 {
+    width: 150px;
+    background-color: #1CEA0A;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+@media (min-width: 730px) {
+    .form-container {
+        width: 30%;
+        float: center;
+    }
+    .input {
+        width: 90%;
+    }
+    .button {
+        width: 100%;
+    }
+}
+/*modal styles */
+.modal  {
+    display: none;
+    position: fixed; 
+    color: black;
+    top: 80%;
+    z-index: 10;
+   width: 300px;
+   left:5%;
+   right: 5%;
+}
+
+.modal-content {
+    position: absolute;
+    font-size: 13px;
+    background-color: #fff;
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-content p {
+    color: black;
+    font-size: 13px;
+}
+
+/* Checkbox styles */
+.checkbox-label {
+    color: black;
+    font-size: 13px;
+    display: block;
+  
+}

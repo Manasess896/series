@@ -1,0 +1,60 @@
+body {
+      background-color: black;
+      color: white;
+    }
+
+    .accordion {
+      overflow-x: hidden;
+    }
+
+    .container {
+      margin: 10px;
+      border-radius: 10px;
+      height: auto;
+      padding: 20px;
+      background-color: white;
+      align-content: center;
+     color: black;
+     text-align: center;
+     text-transform: uppercase;
+    }
+@media(min-width: 768px){
+  .container{
+    width: 50%;
+    margin:12px auto;
+  }
+}
+    .openbuttons {
+      float: right;
+      background-color: #42445A00;
+      border: none;
+      font-weight: bold;
+      font-size: 25px;
+      transition: 3s ease-in;
+    }
+
+    .closebuttons {
+      float: left;
+      background-color: #42445A00;
+      border: none;
+      font-weight: bold;
+      font-size: 25px;
+      display: none;
+      transition: 3s ease;
+    }
+
+    .content {
+      display: none;
+      transition: 3s ease-in-out;
+    }
+    .multi-left-btn{
+      position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 10; color: orange; border: none; cursor: pointer;background-color: transparent;border: 0.1px solid white;font-size: 25px;
+    }
+    .multi-right-btn{
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10; color: orange; border: none; cursor: pointer; background-color: transparent;
+      font-size: 25px;
+      border: 0.1px solid whitesmoke;
+    }
+    #multi-btn-cont{
+      position: relative; width: 100%; overflow: hidden;
+    }

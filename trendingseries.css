@@ -1,0 +1,100 @@
+     /* Base styles for the card container and grid */
+        #movie-grid {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            margin-left: 15px;
+            
+        }
+
+        /* Styles for the flip card */
+        .card {
+            width: 250px;
+            height: 350px;
+            perspective: 1000px;
+            cursor: pointer;
+            flex-shrink: 0;
+            color: white;
+            
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+
+        .card.flip .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border: 1px solid #CCCCCC00;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card-front {
+           /* display: flex;
+            justify-content:center;
+            align-items:center;*/
+            background: #FFFFFF00;
+        }
+
+        .card-back {
+            background: #00000000;
+            transform: rotateY(180deg);
+            
+            padding-left: 30px;
+            /*display: flex;
+            
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+            text-align: center;*/
+        }
+
+        .card-back h3 {
+            margin: 10px 0;
+            padding: 1px;
+            font-size: 10px;
+        }
+
+        .card-back p {
+            font-size: 8px;
+          
+        }
+
+        .movie-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .none {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            display: none;
+        }
+        #trendingseries{
+          display: none;
+        }
+        @media(min-width:720px) and (max-width:1024px){
+            #movie-grid{
+                gap: 20px;
+            }
+        }

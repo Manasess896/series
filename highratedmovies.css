@@ -1,0 +1,83 @@
+body {
+      background-color: #111111;
+    }
+
+    #series-grid-highrated {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding: 20px;
+    }
+    .title {
+      color: red;
+      position: absolute;
+      z-index: 100;
+      background-color: rgba(175, 175, 175, 1);
+      top: 0;
+    }
+    .series-card-highrated {
+      width: 300px;
+      height: 400px;
+      perspective: 1000px;
+      cursor: pointer;
+      flex-shrink: 0;
+      color: white;
+    }
+
+    .series-card-inner-highrated {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+
+
+    .series-card-flip-highrated  .series-card-inner-highrated {
+      transform: rotateY(180deg);
+    }
+
+    .series-card-front-highrated,
+    .series-card-back-highrated {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border: 1px solid #CCCCCC00;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .series-card-front-highrated {
+      background: #FFFFFF00;
+    }
+
+   .series-card-back-highrated  {
+      background: #00000000;
+      transform: rotateY(180deg);
+      padding-left: 30px;
+    }
+
+    .series-card-back-highrated h3 {
+      margin: 10px 0;
+      padding: 1px;
+      font-size: 10px;
+    }
+
+    .series-card-back-highrated p {
+      font-size: 8px;
+    }
+
+    .series-thumbnail-highrated img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .none {
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      display: none;
+    }
