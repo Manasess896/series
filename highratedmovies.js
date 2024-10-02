@@ -13,7 +13,7 @@ const upcomingMoviesGrid = document.getElementById('series-grid-highrated');
       upcomingMoviesGrid.scrollBy({ left: 300, behavior: 'smooth' });
     });
     window.addEventListener('DOMContentLoaded', function() {
-      const tmdbApiKeyHighRated = process.env.TMDB_KEY; // Replace with your TMDb API key
+      const tmdbApiKeyHighRated = 'd6e256dc1cc661c0bf793767a74948df'; // Replace with your TMDb API key
       const seriesGridHighRated = document.getElementById('series-grid-highrated');
 
       let currentSeriesPageHighRated = 1;
