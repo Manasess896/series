@@ -13,7 +13,7 @@ trendingseriesrightbutton.addEventListener('click', () => {
   trendingseriesbtns.scrollBy({ left: 300, behavior: 'smooth' });
 });
 window.addEventListener('DOMContentLoaded', function () {
-    const tmdbApiKey =process.env.TMDB_KEY;  // Replace with your TMDb API key
+    const tmdbApiKey ='d6e256dc1cc661c0bf793767a74948df';  // Replace with your TMDb API key
     const movieGrid = document.getElementById('movie-grid');
     const regenerateBtn = document.getElementById('movie-regenerate-btn');
     const slideLeftBtn = document.getElementById('slide-left-btn');
