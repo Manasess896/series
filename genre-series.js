@@ -12,7 +12,7 @@ seriesgenreleftbtn.addEventListener('click', () => {
 seriesgenrerightbtn.addEventListener('click', () => {
  seriesgenrebtn.scrollBy({ left: 300, behavior: 'smooth' });
 });
-const apitmdb =process.env.TMDB_KEY;  // Replace with your TMDB API key
+const apitmdb ='d6e256dc1cc661c0bf793767a74948df';  // Replace with your TMDB API key
 const seriesgenre = document.getElementById('series-genre'); // Container for series
 let page1 = 1; // To handle endless scrolling
 let seriesGenre = ''; // Keep track of the current genre
