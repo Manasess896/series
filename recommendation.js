@@ -1,7 +1,7 @@
 require('dotenv').config();
 window.addEventListener('DOMContentLoaded', function () {
         const onAirGrid = document.getElementById('on-air-grid');
-    const tmdbApiKey =process.env.TMDB_KEY;  // Replace with your TMDb API key
+    const tmdbApiKey ='d6e256dc1cc661c0bf793767a74948df';  // Replace with your TMDb API key
     const recommendationGrid = document.getElementById('recommendation-grid');
     const recommendationSearchBtn = document.getElementById('recommendation-search-btn');
     const recommendationSearchInput = document.getElementById('recommendation-search-input');
