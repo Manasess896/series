@@ -1,4 +1,16 @@
+const moviesgenrebtn= document.getElementById('movies-genre');
+const moviesgenreleftbtn = document.getElementById('moviesgenreleftbtn');
+const moviesgenrerightbtn = document.getElementById('moviesgenrerightbtn');
 
+// Scroll left
+moviesgenreleftbtn.addEventListener('click', () => { 
+    moviesgenrebtn.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+// Scroll right
+moviesgenrerightbtn.addEventListener('click', () => {
+ moviesgenrebtn.scrollBy({ left: 300, behavior: 'smooth' });
+});
 const apiKeytmdb ='d6e256dc1cc661c0bf793767a74948df; // Replace with your TMDB API key
 const moviegenre = document.getElementById('movies-genre'); // Container for movies
 let page2 = 1; // To handle endless scrolling
