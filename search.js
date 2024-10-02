@@ -1,6 +1,6 @@
 
                     document.addEventListener('DOMContentLoaded', function () {
-                        const tmdbApiKey =process.env.TMDB_KEY; // Replace with your TMDb API key
+                        const tmdbApiKey ='d6e256dc1cc661c0bf793767a74948df'; // Replace with your TMDb API key
                         const omdbApiKey = 'ffe8b9b0'; // Replace with your OMDb API key
                         const tmdbMovieListContainer = document.getElementById('tmdb-movie-list');
                         const omdbMovieListContainer = document.getElementById('omdb-movie-list');
