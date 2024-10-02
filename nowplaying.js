@@ -13,7 +13,7 @@ const nowplaying = document.getElementById('now-playing-grid');
       nowplaying.scrollBy({ left: 300, behavior: 'smooth' });
     });
     window.addEventListener('DOMContentLoaded', function() {
-      const tmdbApiKey =process.env.TMDB_KEY;  // Replace with your TMDb API key
+      const tmdbApiKey ='d6e256dc1cc661c0bf793767a74948df';  // Replace with your TMDb API key
       const nowPlayingGrid = document.getElementById('now-playing-grid');
       const nowPlayingLoadMoreBtn = document.getElementById('now-playing-load-more-btn');
 
