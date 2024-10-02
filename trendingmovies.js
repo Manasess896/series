@@ -12,7 +12,7 @@ trendingmoviebtns.scrollBy({ left: -300, behavior: 'smooth' });
 trendingmovierightbutton.addEventListener('click', () => {
   trendingmoviebtns.scrollBy({ left: 300, behavior: 'smooth' });
 });
-const apiKey = process.env.TMDB_KEY; // Replace with your TMDB API key
+const apiKey ='d6e256dc1cc661c0bf793767a74948df'; // Replace with your TMDB API key
         const uniqueMoviesGrid = document.getElementById('unique-movies-grid');
         let allMovies = []; // To store all fetched movies
 
