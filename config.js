@@ -1,13 +1,13 @@
 
 var firebaseConfig = {
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    databaseURL: process.env.FIREBASE_DATABASE_URL,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID,
-    measurementId: process.env.FIREBASE_MEASUREMENT_ID
+    apiKey: "AIzaSyCHsM7ilPDcoybvEhGkviM4p_4l7LB4mrE",
+    authDomain: "psychic-heading-419408.firebaseapp.com",
+    databaseURL: "https://psychic-heading-419408-default-rtdb.firebaseio.com",
+    projectId: "psychic-heading-419408",
+    storageBucket: "psychic-heading-419408.appspot.com",
+    messagingSenderId: "178132155551",
+    appId: "1:178132155551:web:a221e700a40e8585adb6aa",
+    measurementId: "G-DWC79ZBE43"
 };
 
 firebase.initializeApp(firebaseConfig);
