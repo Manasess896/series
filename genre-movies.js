@@ -70,6 +70,7 @@ function displayMovies2(movies) {
         movieCard.innerHTML = `
             <div class="genre-movie-card-inner">
                 <div class="genre-movie-front">
+       <p class="title">Title🎬:${title} [${new Date(releaseDate).getFullYear()}]</p>
                     ${posterImage}
                 </div>
                 <div class="genre-movie-back">
