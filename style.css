@@ -15,7 +15,7 @@ canvas{
             border: 0px;
             border-radius:5px ;
             padding: 10px;
-            position: absolute;
+            position: fixed;
             z-index: 1000;
             margin-top: 100px;
             text-decoration-color:transparent;
